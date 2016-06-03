@@ -8,7 +8,7 @@
 #Region "LOAD CLOSE FORMULARIO"
 
     Private Sub FrmMdiPrincipal_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
+        'MuestraTabForm()
     End Sub
 
 #End Region
@@ -26,6 +26,16 @@
         End If
     End Sub
 
+    Public Sub MuestraTabForm()
+        Dim myTabPage As New TabPage()
+        myTabPage.Text = "Prueba "
+        TabPrincipal.TabPages.Add(myTabPage)
+    End Sub
+
+    Public Sub CerrarTab()
+        TabPrincipal.SelectedTab.Name.ToString()
+    End Sub
+
 #End Region
 
 #Region "EVENTOS CONTROLADORES"
@@ -37,5 +47,11 @@
 
 #End Region
 
+    Private Sub CerrarTabToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles CerrarTabToolStripMenuItem.Click
+        Dim valor As String = Nothing
+        Dim valor1 As String = Nothing
 
+        valor = sender.Name
+        'CerrarTab()
+    End Sub
 End Class
