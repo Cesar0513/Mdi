@@ -1,0 +1,7 @@
+﻿
+Module ModVariablesGenerales
+
+
+
+
+End Module
